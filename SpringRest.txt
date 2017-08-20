@@ -1,0 +1,53 @@
+Application.java
+
+@ComponentScan
+@EnableAutoConfiguration
+public class applicatiom
+{
+public statuc void main(Strimg args[])
+{
+SpringApplication.run(Application.class,args);
+}
+}
+
+RestTestController.java
+
+@RestController
+public class RestTestController
+{
+private List<String> datalist=new.ArrayList<String>(Arrays.asList("Spring","Rest",""SRC)):
+@RequestMapping("/getdata")
+public Data getData(@RequestParam(value="id",defaultvalue="0")Integer id)
+{
+return new Data(id,datalist.get(id);
+}
+}
+
+Data.java
+
+public class Data
+{
+private Integer id;
+private String value;
+public Data(Integer id,string value)
+{
+this.id=id;
+this.value=value;
+}
+public Integer getId()
+{
+return id;
+}
+public void setId()
+{
+this.id=id;
+}
+public String getValue()
+{
+return value;
+}
+public void setValue()
+{
+this.value=value;
+}
+}
